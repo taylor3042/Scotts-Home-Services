@@ -19,6 +19,44 @@
   grid-template-columns: repeat(10, 1fr);
 }
 
+.servicesAvailable
+{
+    grid-row: 1/6;
+    grid-column: 2/10;
+    background-color: var(--secondary-color);
+    grid-template-columns: repeat(13, 1fr);
+    display: grid;
+    padding: 40px;
+    font-size: 1.2em;
+    justify-content: center;
+}
+
+.lawnCare
+{
+  grid-row: 2/4;
+  grid-column: 2/5;
+  padding: 10px;
+  background-color: var(--accent1-color);
+  justify-content: space-around;
+  
+}
+
+.cleaningServices
+{
+  grid-row: 2/4;
+  grid-column: 6/9;
+  background-color: var(--accent1-color);
+}
+
+.painting
+{
+  grid-row: 2/4;
+  grid-column: 10/13;
+  left: 10px;
+  background-color: var(--accent1-color);
+}
+
+
 nav {
   
     display: flex;
