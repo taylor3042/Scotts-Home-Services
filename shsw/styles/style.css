@@ -14,47 +14,122 @@
 }
 
 .home-grid {
-  margin-top: 75px;
   display: grid;
   grid-template-columns: repeat(10, 1fr);
+  margin-top: 10%;
 }
 
-.servicesAvailable
-{
-    grid-row: 1/6;
-    grid-column: 2/10;
-    background-color: var(--secondary-color);
-    grid-template-columns: repeat(13, 1fr);
-    display: grid;
-    padding: 40px;
-    font-size: 1.2em;
-    justify-content: center;
+#paint-img {
+  z-index: -1;
+  grid-column: 1/11;
+  grid-row: 1/6;
+  width: 100%;
+  height: 125%;
+}
+.servicesAvailable {
+  grid-row: 1/11;
+  grid-column: 1/11;
+  /*background-color: var(--secondary-color);*/
+  display: grid;
+  grid-template-columns: repeat(20, 4%);
+  grid-template-rows: repeat(12, 10%);
+  grid-gap: 1%;
+  font-size: 1.2em;
+  justify-content: center;
 }
 
-.lawnCare
-{
-  grid-row: 2/4;
-  grid-column: 2/5;
-  padding: 10px;
-  background-color: var(--accent1-color);
-  justify-content: space-around;
+.servicesAvailable h2 {
+  grid-row: 2/3;
+  grid-column: 8/14;
+  font-size: 1.4em;
+  text-align: center;
+  font-family: var(--heading-font);
+  color: var(--primary-color);
+}
+
+.lawnCare {
+  grid-row: 3/5;
+  grid-column: 1/7;
+  background-color: var(--primary-color);
+  padding: 5%;
+  margin-bottom: -9%;
+  color:white;
+  font-family: var(--paragraph-font);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  z-index: 1;
+}
+
+.toggle-button{
+  display: block;
+  cursor: pointer;
+  border: none;
+  z-index: 0;
+  text-align: center;
+  color: white;
+  background-color: var(--primary-color);
+  min-width: 100%;
+}
+
+.lawn-care-button {
+  /* Styles for the lawn care button */
+  grid-column: 1/7;
+  grid-row: 5/6;
+}
+
+.cleaning-services-button {
+  /* Styles for the cleaning services button */
+  grid-column: 8/14;
+  grid-row: 5/6;
+}
+
+.painting-button {
+  /* Styles for the painting button */
+  grid-column: 15/21;
+  grid-row: 5/6;
+}
+
+
+.lawnCare h3,
+.cleaningServices h3,
+.painting h3 {
+  text-align: center;
+  color: white; 
+}
+
+.lawnCare p,
+.cleaningServices p,
+.painting p {
+  text-align: center;
   
 }
 
-.cleaningServices
-{
-  grid-row: 2/4;
-  grid-column: 6/9;
-  background-color: var(--accent1-color);
+.cleaningServices {
+  grid-row: 3/5;
+  grid-column: 8/14;
+  background-color: var(--primary-color);
+  color: white;
+  font-family: var(--paragraph-font);
+  padding: 5%;
+  overflow: hidden;
+  margin-bottom: -9%;
+  text-overflow: ellipsis;
+  z-index: 1;
 }
 
-.painting
-{
-  grid-row: 2/4;
-  grid-column: 10/13;
-  left: 10px;
-  background-color: var(--accent1-color);
+.painting {
+  grid-row: 3/5;
+  grid-column: 15/21;
+  background-color: var(--primary-color);
+  color: white;
+  font-family: var(--paragraph-font);
+  padding: 5%;
+  overflow: hidden;
+  margin-bottom: -9%;
+  text-overflow: ellipsis;
+  z-index: 1;
 }
+
 
 
 nav {
@@ -120,6 +195,7 @@ footer
   font-size: 1.2em;
   justify-content: space-around;
   align-items: center;  
+  margin-top: 40%;
 }
 
 footer a 
