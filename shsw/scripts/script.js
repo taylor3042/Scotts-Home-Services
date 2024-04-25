@@ -23,13 +23,18 @@ document.addEventListener("DOMContentLoaded", function() {
                 document.querySelector('.' + associatedElement).style.gridRow = startRow + ' / ' + (5 + endRow); // Adjust rows
                 if (associatedElement[0] == 'l')
                 {
-                    document.querySelector('.lawn-care-button').style.gridRow = startRow + endRow + 2 + ' / ' + (5 + endRow + 1);  
+                    document.querySelector('.lawn-care-button').style.gridRow = startRow + endRow + 1 + ' / ' + (7 + endRow);
+                    document.querySelector('.lawn-care-button').style.zIndex = '0';
+
+                      
                 }else if(associatedElement[0] == 'p')
                 {
-                    document.querySelector('.painting-button').style.gridRow = startRow + endRow + 2 + ' / ' + (5 + endRow + 1);
+                    document.querySelector('.painting-button').style.gridRow = startRow + endRow + 1 + ' / ' + (7 + endRow);
+                    document.querySelector('.painting-button').style.zIndex = '0';
                 }else if(associatedElement[0] == 'c')
                 {
-                    document.querySelector('.cleaning-services-button').style.gridRow = startRow + endRow + 2 + ' / ' + (5 + endRow + 1);
+                    document.querySelector('.cleaning-services-button').style.gridRow = startRow + endRow + 1 + ' / ' + (7 + endRow);
+                    document.querySelector('.cleaning-services-button').style.zIndex = '0';
                 }
             } else {
                 this.textContent = 'More';
@@ -37,17 +42,17 @@ document.addEventListener("DOMContentLoaded", function() {
                 //content.parentNode.style.gridTemplateRows = '';
                 
                 // Reset the grid row span of the associated element
-                document.querySelector('.' + associatedElement).style.gridRow = '3 / 5'; // Reset to original value
+                document.querySelector('.' + associatedElement).style.gridRow = '4 / 7'; // Reset to original value
 
                 if (associatedElement[0] == 'l')
                 {
-                    document.querySelector('.lawn-care-button').style.gridRow = 5 + ' / ' + 6;  
+                    document.querySelector('.lawn-care-button').style.gridRow = '7/9';  
                 }else if(associatedElement[0] == 'p')
                 {
-                    document.querySelector('.painting-button').style.gridRow = 5 + ' / ' + 6;
+                    document.querySelector('.painting-button').style.gridRow = '7/9';
                 }else if(associatedElement[0] == 'c')
                 {
-                    document.querySelector('.cleaning-services-button').style.gridRow = 5 + ' / ' + 6;
+                    document.querySelector('.cleaning-services-button').style.gridRow = '7/9';
                 }
                 //document.querySelector('.' + associatedElement).style.gridRow = startRow + ' / ' + endRow; // Reset to original value
             }
