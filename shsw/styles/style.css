@@ -25,7 +25,7 @@
 .servicesAvailable {
   grid-row: 1/4;
   grid-column: 1/11;
-  background-image: url('/shsw/images/painting.png');
+  background-image: url("../images/painting.png");
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -43,7 +43,7 @@
   grid-column: 1/11;
   font-family: var(--paragraph-font);
   text-align: center;
-  background-image: url(/shsw/images/sweeping.png);
+  background-image: url("../images/sweeping.png");
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -66,7 +66,7 @@
   display: grid;
   grid-template-columns: repeat(10, 10%);
   grid-template-rows: repeat(12, 10%);
-  background-image: url(/shsw/images/mowing.png);
+  background-image: url("../images/mowing.png");
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
