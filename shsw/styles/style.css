@@ -21,6 +21,48 @@
 }
 
 
+header{
+  display: flex;
+  align-items: center; 
+  background-image: url("../images/backdrop-color.png");
+  background-size: 25% 110%; /* Cover the full width and half the height */
+  background-repeat: repeat-x;
+  justify-content: space-around;
+  max-height: 170px;
+}
+
+nav {
+  max-height: 150px;
+  line-height: 5em;
+  font-size: 1.6em;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav a {
+  text-align: center;
+  padding: 5px;
+  font-family: var(--heading-font);
+  min-width: 120px;
+  text-decoration: none;
+}
+
+nav a:link, nav a:visited {
+  color: var(--primary-color);
+}
+nav a:hover {
+  color: var(--secondary-color);
+}
+#logo_link {
+  justify-self: center;
+  align-self: center;
+}
+.logo
+{
+  width: 170px;
+}
+
 
 .servicesAvailable {
   grid-row: 1/4;
@@ -225,42 +267,6 @@
 
 
 
-nav {
-  
-    display: flex;
-    justify-content: space-around; 
-    background-image: url("../images/backdrop-color.png");
-    background-size: 15% 220%; /* Cover the full width and half the height */
-    background-repeat: repeat-x;
-    max-height: 150px;
-    line-height: 5em;
-    font-size: 1.6em;
-    list-style-type: none;
-    
-  }
-
-  nav a {
-    padding: 5px;
-    font-family: var(--heading-font);
-    min-width: 120px;
-    text-decoration: none;
-
-  }
-  nav a:link, nav a:visited {
-    color: var(--primary-color);
-  }
-  nav a:hover {
-    color: var(--secondary-color);
-  }
-  #logo_link {
-    justify-self: center;
-    align-self: center;
-}
-  .logo
-{
-    margin-top: 60px;
-    width: 170px;
-}
 
 footer .social img {
   width: 40px;
@@ -303,4 +309,64 @@ footer p
     font-size: 0.9em;
     color: var(--primary-color);
     text-decoration: none;
+}
+
+@media screen and (max-width: 900px) {
+  .home-grid {
+    display: grid;
+    /*grid-template-columns: repeat(5, 1fr); */
+    grid-template-rows: repeat(6, 1fr);
+  }
+
+    nav{
+      background-size: 40% 110%;
+      background-repeat: repeat-x;
+      height: 150%;
+  }
+
+  footer
+    {
+        height: 60%;
+        flex-direction: column;
+        text-align: center;
+        display: block;
+        background-size: 50% 110%;
+        background-repeat: repeat-x;
+    } 
+    footer p, nav a
+    {
+        font-size: 75%;
+        width: 95%;
+    }
+
+    header
+    {
+        padding: 5px 5px;
+        display: block;
+        align-items: center;  
+        
+    }
+    .signUplk
+    {
+      height: 10%;
+      width: 160%;
+    }
+    nav a, nav
+    {
+        justify-content: space-around;
+        min-width: 0;
+        line-height: 0.3em;
+    }
+
+    nav a{
+      font-size: 45%;
+    }
+
+    .logo{
+      width: 25%;
+      padding: 0px;
+      }
+
+    
+
 }

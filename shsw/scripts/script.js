@@ -60,4 +60,14 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+// Wait for the document to finish loading
+document.addEventListener("DOMContentLoaded", function() {
+    // Get the link element with the href attribute equal to "moreInfoDeals.html"
+    var link = document.querySelector('nav a[href="moreInfoDeals.html"]');
+    if (link) {
+      // Set the text of the link to "Deals"
+      link.textContent = "Deals";
+    }
+  });
+  
 
