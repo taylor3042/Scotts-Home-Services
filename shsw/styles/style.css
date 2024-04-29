@@ -281,7 +281,7 @@ nav a:hover {
   width: 100%;
   grid-row: 1/5;
   align-items: center;
-  background-image: url("../images/niceLawn.png");
+  background-image: url("../images/niceLawn.jpg");
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -389,6 +389,17 @@ footer p
     grid-template-rows: repeat(6, 1fr);
   }
 
+  .forum iframe{
+    grid-row: 3/7;
+  }
+
+  .forum p{
+    font-size: 80%;
+  }
+
+  .calendar iframe{
+    grid-row: 3/9;
+  }
   .servicesAvailable {
     grid-row: 1/4;
     grid-template-rows: repeat(49, 2%);
@@ -444,7 +455,7 @@ footer p
         flex-direction: column;
         text-align: center;
         display: block;
-        background-size: 50% 110%;
+        background-size: 60% 110%;
         background-repeat: repeat-x;
     } 
     footer p, nav a
@@ -457,7 +468,8 @@ footer p
     {
         padding: 5px 5px;
         display: block;
-        align-items: center;  
+        align-items: center;
+        background-size: 60% 110%;  
         
     }
     .signUplk
