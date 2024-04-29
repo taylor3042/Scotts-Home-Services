@@ -20,12 +20,18 @@
   margin-top: 10%;
 }
 
+.schedule-grid {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(6, 35%);
+  margin-top: 10%;
+}
 
 header{
   display: flex;
   align-items: center; 
   background-image: url("../images/backdrop-color.png");
-  background-size: 25% 110%; /* Cover the full width and half the height */
+  background-size: 15% 100%; /* Cover the full width and half the height */
   background-repeat: repeat-x;
   justify-content: space-around;
   max-height: 170px;
@@ -38,13 +44,14 @@ nav {
   list-style-type: none;
   display: flex;
   justify-content: space-around;
+  min-width: 80%;
 }
 
 nav a {
   text-align: center;
   padding: 5px;
   font-family: var(--heading-font);
-  min-width: 120px;
+  /*min-width: 180px;*/
   text-decoration: none;
 }
 
@@ -72,9 +79,8 @@ nav a:hover {
   background-size: cover;
   background-attachment: fixed;
   display: grid;
-  grid-template-columns: repeat(20, 4%);
-  grid-template-rows: repeat(20, 4%);
-  grid-gap: 1%;
+  grid-template-columns: repeat(25, 4%);
+  grid-template-rows: repeat(25, 4%);
   font-size: 1.2em;
   justify-content: center;
 }
@@ -116,7 +122,7 @@ nav a:hover {
 
 .ourPromise iframe
 {
-  grid-row: 4/6;
+  grid-row: 3/5;
   grid-column: 2/5;
   width: 80%;
   height: 100%;
@@ -125,10 +131,11 @@ nav a:hover {
 }
 
 .ourPromise p{
-  grid-row: 2/8;
+  grid-row: 2/6;
   grid-column: 5/10;
   padding: 6%;
   margin: 0;
+  font-size: auto;
   text-align: center;
   font-family: var(--paragraph-font);
   background-color: var(--secondary-color);
@@ -142,7 +149,7 @@ nav a:hover {
   background-color: var(--secondary-color);
   color: white;
   grid-column: 2/5;
-  grid-row: 2/8;
+  grid-row: 2/6;
   z-index: 0;
 }
 
@@ -173,7 +180,7 @@ nav a:hover {
 
 .servicesAvailable h2 {
   grid-row: 2/3;
-  grid-column: 8/14;
+  grid-column: 10/17;
   font-size: 1.4em;
   text-align: center;
   font-family: var(--heading-font);
@@ -182,13 +189,39 @@ nav a:hover {
 
 .lawnCare {
   grid-row: 4/7;
-  grid-column: 1/7;
-  background-color: var(--primary-color);
+  grid-column: 2/9;
+  background-color: var(--secondary-color);
   padding: 5%;
-  margin-bottom: -9%;
   color:white;
   font-family: var(--paragraph-font);
   overflow: hidden;
+  margin-bottom: -11%;
+  text-overflow: ellipsis;
+  z-index: 1;
+}
+
+.cleaningServices {
+  grid-row: 4/7;
+  grid-column: 10/17;
+  background-color: var(--secondary-color);
+  color: white;
+  font-family: var(--paragraph-font);
+  padding: 5%;
+  overflow: hidden;
+  margin-bottom: -11%;
+  text-overflow: ellipsis;
+  z-index: 1;
+}
+
+.painting {
+  grid-row: 4/7;
+  grid-column: 18/25;
+  background-color: var(--secondary-color);
+  color: white;
+  font-family: var(--paragraph-font);
+  padding: 5%;
+  overflow: hidden;
+  margin-bottom: -11%;
   text-overflow: ellipsis;
   z-index: 1;
 }
@@ -200,7 +233,7 @@ nav a:hover {
   z-index: 0;
   text-align: center;
   color: white;
-  background-color: var(--primary-color);
+  background-color: var(--secondary-color);
   min-width: 100%;
 }
 
@@ -209,19 +242,19 @@ nav a:hover {
 
 .lawn-care-button {
   /* Styles for the lawn care button */
-  grid-column: 1/7;
+  grid-column: 2/9;
   grid-row: 7/9;
 }
 
 .cleaning-services-button {
   /* Styles for the cleaning services button */
-  grid-column: 8/14;
+  grid-column: 10/17;
   grid-row: 7/9;
 }
 
 .painting-button {
   /* Styles for the painting button */
-  grid-column: 15/21;
+  grid-column: 18/25;
   grid-row: 7/9;
 }
 
@@ -239,34 +272,73 @@ nav a:hover {
   
 }
 
-.cleaningServices {
-  grid-row: 4/7;
-  grid-column: 8/14;
-  background-color: var(--primary-color);
-  color: white;
-  font-family: var(--paragraph-font);
-  padding: 5%;
-  overflow: hidden;
-  margin-bottom: -9%;
-  text-overflow: ellipsis;
-  z-index: 1;
+.calendar
+{
+  display: grid;
+  grid-template-columns: repeat(10, 10%);
+  grid-template-rows: repeat(10, 10%);
+  grid-column: 1/11;
+  width: 100%;
+  grid-row: 1/5;
+  align-items: center;
+  background-image: url("../images/niceLawn.png");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
-.painting {
-  grid-row: 4/7;
-  grid-column: 15/21;
-  background-color: var(--primary-color);
+.calendar h2
+{
+  grid-row: 2/3;
+  grid-column: 4/8;
+  width: 100%;
+  text-align: center;
+  font-family: var(--heading-font);
   color: white;
-  font-family: var(--paragraph-font);
-  padding: 5%;
-  overflow: hidden;
-  margin-bottom: -9%;
-  text-overflow: ellipsis;
-  z-index: 1;
 }
 
+.calendar iframe
+{
+  grid-column: 2/10;
+  grid-row: 3/10;
+  width: 100%;
+  height: 100%;
+}
 
+.forum
+{
+  display: grid;
+  grid-template-columns: repeat(10, 10%);
+  grid-template-rows: repeat(8, 10%);
+  grid-column: 1/11;
+  width: 100%;
+  grid-row: 5/8;
+  align-items: center;
+  background-image: url("../images/gloveCleaning.png");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
 
+.forum p
+{
+  grid-column: 1/11;
+  grid-row: 1/2;
+  height: 100%;
+  line-height: 500%;
+  font-family: var(--paragraph-font);
+  background-color: var(--secondary-color);
+  text-align: center;
+  color: white;
+}
+
+.forum iframe
+{
+  grid-column: 2/10;
+  grid-row: 3/9;
+  width: 100%;
+  height: 100%;
+}
 
 footer .social img {
   width: 40px;
@@ -282,7 +354,7 @@ footer
 {
 
   background-image: url("../images/backdrop-color.png");
-  background-size: 15% 220%;
+  background-size: 15% 100%;
   background-repeat: repeat-x;
   
   grid-row: 7/8;
@@ -293,7 +365,7 @@ footer
   font-size: 1.2em;
   justify-content: space-around;
   align-items: center;  
-  margin-top: 25%;
+  margin-top: 22%;
 }
 
 footer a 
@@ -311,11 +383,53 @@ footer p
     text-decoration: none;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 700px) {
   .home-grid {
     display: grid;
-    /*grid-template-columns: repeat(5, 1fr); */
     grid-template-rows: repeat(6, 1fr);
+  }
+
+  .servicesAvailable {
+    grid-row: 1/4;
+    grid-template-rows: repeat(49, 2%);
+    font-size: 60%;
+    justify-content: center;
+  }
+
+  .servicesAvailable h2
+  {
+    grid-row: 1/2;
+  }
+
+  .toggle-button{
+    display: none;
+  }
+
+  .cleaningServices
+  {
+    margin: 0;
+    grid-column: 2/25;
+    grid-row: 3/17;
+  }
+  
+  .signUp p
+{
+  padding: 2%;
+}
+
+
+  .lawnCare
+  {
+    margin: 0;
+    grid-column: 2/25;
+    grid-row: 18/32;
+  }
+
+  .painting
+  {
+    margin: 0;
+    grid-column: 2/25;
+    grid-row: 33/49;
   }
 
     nav{
@@ -348,9 +462,59 @@ footer p
     }
     .signUplk
     {
-      height: 10%;
-      width: 160%;
+      grid-column: 3/8;
+      height: 20%;
+      width: 100%;
+      padding: 2%;
     }
+
+
+.ourPromise
+{
+  grid-column: 1/11;
+  display: grid;
+  grid-template-columns: repeat(10, 10%);
+  grid-template-rows: repeat(21, 3%);
+  background-image: url("../images/mowing.png");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.ourPromise iframe
+{
+  grid-row: 15/19;
+  grid-column: 3/8;
+  width: 100%;
+  height: 100%;
+  margin-left: 9%;
+  z-index: 1;
+}
+
+.ourPromise p{
+  grid-row: 3/20;
+  grid-column: 2/10;
+  padding: 6%;
+  font-size: 58%;
+  text-align: center;
+  font-family: var(--paragraph-font);
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.ourPromise h2{
+  text-align: center;
+  padding: 2%;
+  margin: 0;
+  background-color: var(--secondary-color);
+  color: white;
+  grid-column: 2/10;
+  grid-row: 2/3;
+  z-index: 0;
+}
+
+
+
     nav a, nav
     {
         justify-content: space-around;

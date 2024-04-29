@@ -33,7 +33,8 @@ document.addEventListener("DOMContentLoaded", function() {
                     document.querySelector('.painting-button').style.zIndex = '0';
                 }else if(associatedElement[0] == 'c')
                 {
-                    document.querySelector('.cleaning-services-button').style.gridRow = startRow + endRow + 1 + ' / ' + (7 + endRow);
+                    //document.querySelector('.cleaning-services-button').style.gridRow = startRow + endRow + 3 + ' / ' + (7 + endRow);
+                    document.querySelector('.cleaning-services-button').style.gridRow =  endRow + startRow + 1 + ' / ' + (7 + endRow);
                     document.querySelector('.cleaning-services-button').style.zIndex = '0';
                 }
             } else {
