@@ -64,11 +64,28 @@ document.addEventListener("DOMContentLoaded", function() {
 // Wait for the document to finish loading
 document.addEventListener("DOMContentLoaded", function() {
     // Get the link element with the href attribute equal to "moreInfoDeals.html"
+    
+    var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    var contactInfoParagraph = document.querySelector('.contact-info p');
+
+    // Check if contactInfoParagraph is not null
+        if (screenWidth <= 700) {
+            // Replace spans with <br> elements
+            var contactInfoHTML = contactInfoParagraph.innerHTML;
+            // Replace all occurrences of "</span>" with "<br>"
+            contactInfoHTML = contactInfoHTML.replace(/<\/span>/g, "<br>");
+
+            // Replace all occurrences of "<span>" with an empty string
+            contactInfoHTML = contactInfoHTML.replace(/<span>/g, "");
+            contactInfoParagraph.innerHTML = contactInfoHTML;
+        } else
+        {
+            contactInfoParagraph.innerHTML = "<span>Phone number:&nbsp;[work phone]</span><span>Email:&nbsp;[work email]</span>LinkedIn Account:&nbsp;[linkedIn profile]";
+        }
     var link = document.querySelector('nav a[href="moreInfoDeals.html"]');
     if (link) {
       // Set the text of the link to "Deals"
       link.textContent = "Deals";
     }
-  });
+    });
   
-
